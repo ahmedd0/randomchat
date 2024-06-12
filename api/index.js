@@ -7,7 +7,7 @@ const { Server } = require("socket.io");
 const io = new Server(server, { cors: { origin: "*" } });
 app.use(express.json());
 app.use(cors({
-    origin: '*', // Allow only requests from this origin
+    "Access-Control-Allow-Origin": "*"
 }));
 
 app.use("/uploads", express.static("uploads"));
